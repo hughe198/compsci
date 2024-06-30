@@ -33,46 +33,11 @@
   
     <!-- Projects/Blogs Section -->
     <div class="row mt-4">
-      <div class="col-md-3 mb-4">
-        <div class="card">
-          <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Project image">
-          <div class="card-body">
-            <h5 class="card-title">Project/Blog Title 1</h5>
-            <p class="card-text">Brief description of the project or blog content.</p>
-            <a href="#" class="btn btn-primary">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 mb-4">
-        <div class="card">
-          <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Project image">
-          <div class="card-body">
-            <h5 class="card-title">Project/Blog Title 2</h5>
-            <p class="card-text">Brief description of the project or blog content.</p>
-            <a href="#" class="btn btn-primary">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 mb-4">
-        <div class="card">
-          <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Project image">
-          <div class="card-body">
-            <h5 class="card-title">Project/Blog Title 3</h5>
-            <p class="card-text">Brief description of the project or blog content.</p>
-            <a href="#" class="btn btn-primary">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 mb-4">
-        <div class="card">
-          <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Project image">
-          <div class="card-body">
-            <h5 class="card-title">Project/Blog Title 4</h5>
-            <p class="card-text">Brief description of the project or blog content.</p>
-            <a href="#" class="btn btn-primary">Read More</a>
-          </div>
+      <div @if(projects)>
+        <div *ngFor ="let project of projects" class="col-md-3 mb-4">
+          <app-project-list [project]="project"></app-project-list>
         </div>
       </div>
     </div>
-  </div>
-  
+
+  <!-- *ngFor ="let project of projects" -->
